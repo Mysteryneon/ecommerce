@@ -3,7 +3,7 @@ import { Typography, Button, Card, CardActions, CardContent, CardMedia } from '@
 
 import useStyles from './styles';
 
-const CardItem = ({item}) => {
+const CardItem = ({item, onUpdateCartQty, onRemoveFromCart}) => {
     console.log(item);
     const classes = useStyles();
   return (
@@ -15,11 +15,11 @@ const CardItem = ({item}) => {
     </CardContent>
     <CardActions className={classes.CardActions}>
         <div className={classes.buttons}>
-            <Button type="button" size="small">-</Button>
+            <Button type="button" size="small" onClick={ onUpdateCartQty(item.id, item.quantity - 1)}>-</Button>
             <Typography>{item.quantity} </Typography>
-            <Button type="button" size="small">+</Button>
+            <Button type="button" size="small" onClick= { onUpdateCartQty(item.id, item.quantity + 1)}>+</Button>
         </div>
-        <Button variant ="contained" type="button" color="secondary">Remove</Button>
+        <Button variant ="contained" type="button" color="secondary" onClick={()=> onRemoveFromCart}>Remove</Button>
     </CardActions>
     </Card>
   )
