@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { commerce } from "./lib/commerce";
-import { Products, Navbar, Cart } from "./components";
+import { Products, Navbar, Cart, Checkout } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AboutUs from "./components/about-us/about-us.components";
 import ContactUs from "./components/contact-us/contact-form.component";
@@ -58,7 +58,9 @@ const App = () => {
           handleEmptyCart={handleEmptyCart}
           />}/>
           <Route exact path="/aboutus"element={<AboutUs />}/>
-          <Route exact path="/contactus"element={<ContactUs />}/>
+          <Route exact path="/contactus"element={<ContactUs/>}/>
+          <Route exact path = "/checkout" element={<Checkout/>}/> 
+          
       </Routes>
     </Router>
   );
