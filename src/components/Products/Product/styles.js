@@ -16,4 +16,8 @@ export default makeStyles(()=> ({
         display: 'flex',
         justifyContent: 'space-between',
     },
+    container: {
+        textDecoration: "none",
+        color: "#36454F",
+    }
 }))

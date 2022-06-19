@@ -1,13 +1,22 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(()=> ({
-  contactusform: {
+export const useStyles = makeStyles(()=> ({
+  mainContent: {
+    marginTop: "2%",
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  
-  title: {
-    marginTop:10,
-    marginBottom:10,
+  alignTextCenter: {
+    textAlign: "center"
   },
+  formField: {
+    marginTop: "10px",
+    marginBottom: "15px",
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+  }
 }))
